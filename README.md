@@ -34,27 +34,30 @@ A full stack web application to track upcoming and past programming contests fro
 
 ---
 
-## 📁 Folder Structure
 
-''' contest-tracker/
-├── backend/
-│ ├── controllers/ # Business logic for routes
-│ ├── middleware/ # JWT auth middleware
-│ ├── models/ # Mongoose schemas
-│ ├── routes/ # API routes
-│ ├── utils/ # External API fetch, mail logic
-│ ├── .env # Env variables
-│ └── server.js # Entry point
-│
-├── frontend/
-│ ├── public/ # Static files
-│ ├── src/
-│ │ ├── api.js # Axios instance
-│ │ ├── App.js # Main app with routing
-│ │ ├── index.js # ReactDOM renderer
-│ │ ├── pages/ # Login, Register, Contests, Profile
-│ │ └── components/ # Reusable components like ContestBox
-│
-├── README.md
-└── package.json
-'''
+---
+
+## 🧪 Clist.by API Integration
+
+This project fetches programming contest data using the [Clist.by API](https://clist.by):
+
+- Platforms like Codeforces, LeetCode, AtCoder, etc.  
+- API is called via backend utility (e.g., `fetchContests.js`)
+- Scheduled fetch using `node-cron` to get fresh contests every few hours
+- Use your Clist API credentials (`CLIST_USERNAME` and `CLIST_API_KEY`) in `.env`
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside `/backend`:
+
+```env
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/contest-tracker
+JWT_SECRET=your_secret
+CLIST_USERNAME=your_clist_username
+CLIST_API_KEY=your_clist_api_key
+
+
+
