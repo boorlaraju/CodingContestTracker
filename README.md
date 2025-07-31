@@ -36,3 +36,26 @@ A full stack web application to track upcoming and past programming contests fro
 
 ## 📁 Folder Structure
 
+contest-tracker/
+├── backend/
+│ ├── controllers/ # Business logic for routes
+│ ├── middleware/ # JWT auth middleware
+│ ├── models/ # Mongoose schemas
+│ ├── routes/ # API routes
+│ ├── utils/ # External API fetch, mail logic
+│ ├── .env # Env variables
+│ └── server.js # Entry point
+│
+├── frontend/
+│ ├── public/ # Static files
+│ ├── src/
+│ │ ├── api.js # Axios instance
+│ │ ├── App.js # Main app with routing
+│ │ ├── index.js # ReactDOM renderer
+│ │ ├── pages/ # Login, Register, Contests, Profile
+│ │ └── components/ # Reusable components like ContestBox
+│
+├── README.md
+└── package.json
+
+y
