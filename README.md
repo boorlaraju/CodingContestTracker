@@ -36,7 +36,7 @@ A full stack web application to track upcoming and past programming contests fro
 
 ## 📁 Folder Structure
 
-contest-tracker/
+''' contest-tracker/
 ├── backend/
 │ ├── controllers/ # Business logic for routes
 │ ├── middleware/ # JWT auth middleware
@@ -57,5 +57,4 @@ contest-tracker/
 │
 ├── README.md
 └── package.json
-
-y
+'''
